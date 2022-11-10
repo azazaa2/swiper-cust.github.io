@@ -1,0 +1,101 @@
+.conteiner {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+    .wrapper-con {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        font-size:30px;
+
+        .con {
+            border:2px solid black;
+            width:500px;
+            height:250px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            &.c1 {
+                display:none;
+            }
+
+            &.active {
+                display:flex;
+            }
+
+            img {
+               width:100%;
+               height:100%;
+               object-fit:cover;
+            }
+        }
+    }
+    .wrapper-btn {
+        width:100%;
+        display:flex;
+        justify-content: space-evenly;
+        position:absolute;
+        top:90px;
+
+        .btn-prev {
+            margin-right: 1px;
+
+            &:hover span {
+                border-left:2px solid #fff;
+                border-bottom:2px solid #fff;
+            }
+            span {
+                width:15px;
+                height:15px;
+                border-bottom: 2px solid #686868;
+                border-left: 2px solid #686868;
+                transform: rotate(45deg);
+                
+            }
+        }
+        .btn-next, .btn-prev  {
+            width:60px;
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            background-color: #111111;
+            transition: all ease-in .3s ;
+
+            &:hover {
+                background-color: #232323;
+            }
+
+            &:active {
+                border:1px solid black;
+                margin:0px;
+            }
+
+            span {
+                transition: all ease-in .3s ;
+            }
+        }
+        .btn-next {
+            margin-left: 1px;
+
+            &:hover span {
+                border-right:2px solid #fff;
+                border-bottom:2px solid #fff;
+            }
+
+            span {
+                width:15px;
+                height:15px;
+                border-right:2px solid #686868;
+                border-bottom: 2px solid #686868;
+                transform: rotate(-45deg);
+            }
+        }
+    } 
+}
+
